@@ -6,7 +6,7 @@ export class Task {
   date: string;
   startTime: string;
   endTime: string;
-  status: 'Pending' | 'In Progress' | 'Completed';
+  status: string;
   description?: string;
 
   constructor(
@@ -17,7 +17,7 @@ export class Task {
     date: string,
     startTime: string,
     endTime: string,
-    status: 'Pending' | 'In Progress' | 'Completed',
+    status: string,
     description?: string,
   ) {
     this.id = id;
