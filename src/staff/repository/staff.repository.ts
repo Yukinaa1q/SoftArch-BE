@@ -286,4 +286,19 @@ export class StaffRepository {
   getStatuses(): string[] {
     return ['Active', 'On Leave', 'Remote', 'Terminated'];
   }
+
+  getDepartments(): string[] {
+    return [
+      'Emergency Department (ER)',
+      'Operating Room / Surgical Department',
+      'Intensive Care Unit (ICU)',
+      'Neonatal ICU (NICU)',
+      'Cardiology',
+      'Radiology / Imaging',
+      'Clinical Laboratory',
+      'Medical-Surgical Ward',
+      'Oncology',
+      'Rehabilitation Unit',
+    ];
+  }
 }

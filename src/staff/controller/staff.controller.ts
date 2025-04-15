@@ -26,6 +26,11 @@ export class StaffController {
     return this.staffService.getAllStaff(filterDto);
   }
 
+  @Get('departments')
+  getDepartments(): { department: string[] } {
+    return { department: this.staffService.getDepartment() };
+  }
+
   @Get('roles')
   getRoles(): { roles: string[] } {
     return { roles: this.staffService.getRoles() };

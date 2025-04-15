@@ -52,4 +52,8 @@ export class StaffService {
   getStatuses(): string[] {
     return this.staffRepository.getStatuses();
   }
+
+  getDepartment(): string[] {
+    return this.staffRepository.getDepartments();
+  }
 }
