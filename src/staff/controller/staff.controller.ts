@@ -57,7 +57,7 @@ export class StaffController {
     return this.staffService.createStaff(staffData);
   }
 
-  @Put(':id')
+  @Post(':id')
   updateStaff(
     @Param(
       'id',
