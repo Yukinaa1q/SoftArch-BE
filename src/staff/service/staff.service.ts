@@ -56,4 +56,13 @@ export class StaffService {
   getDepartment(): string[] {
     return this.staffRepository.getDepartments();
   }
+
+  getStaffByDepartment(department: string): StaffBase[] {
+    if (department === 'All Departments') {
+      return this.getAllStaff();
+    }
+    return this.getAllStaff().filter(
+      (staff) => staff.department === department,
+    );
+  }
 }

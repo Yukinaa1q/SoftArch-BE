@@ -75,4 +75,14 @@ export class MockDataRepository {
     this.tasks[taskIndex].status = status;
     return this.tasks[taskIndex];
   }
+
+  getTasksByStaffIdAndDate(staffId: number, date: string): Task[] {
+    return this.tasks.filter(
+      (task) => task.staffId === staffId && task.date === date,
+    );
+  }
+
+  getTasksByDate(date: string): Task[] {
+    return this.tasks.filter((task) => task.date === date);
+  }
 }

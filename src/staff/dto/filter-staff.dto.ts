@@ -13,3 +13,21 @@ export class FilterStaffDto {
   @IsOptional()
   status?: string;
 }
+
+export class StaffFilterDto {
+  @IsString()
+  @IsOptional()
+  role?: string;
+
+  @IsString()
+  @IsOptional()
+  department?: string;
+
+  @IsString()
+  @IsOptional()
+  searchTerm?: string;
+
+  @IsString()
+  @IsOptional()
+  date?: string;
+}

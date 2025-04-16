@@ -28,4 +28,12 @@ export class TaskService {
   ): Task | undefined {
     return this.mockRepository.updateTaskStatus(taskId, status);
   }
+
+  getTasksByStaffIdAndDate(staffId: number, date: string): Task[] {
+    return this.mockRepository.getTasksByStaffIdAndDate(staffId, date);
+  }
+
+  getTasksByDate(date: string): Task[] {
+    return this.mockRepository.getTasksByDate(date);
+  }
 }

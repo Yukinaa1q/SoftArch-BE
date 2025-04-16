@@ -6,16 +6,19 @@ import { StaffFactory } from './factory/staff.factory';
 import { TaskController } from './controller/task.controller';
 import { TaskService } from './service/task.service';
 import { MockDataRepository } from './repository/mock-data.repository';
+import { WorkloadStatsService } from './service/workload-stats.service';
+import { WorkloadController } from './controller/workload.controller';
 
 @Module({
-  controllers: [StaffController, TaskController],
+  controllers: [StaffController, TaskController, WorkloadController],
   providers: [
     StaffService,
     StaffRepository,
     StaffFactory,
     TaskService,
     MockDataRepository,
+    WorkloadStatsService,
   ],
-  exports: [StaffService, TaskService],
+  exports: [StaffService, TaskService, WorkloadStatsService],
 })
 export class StaffModule {}
